@@ -1,68 +1,107 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text: hsl(45, 100%, 4%);
+  --background: hsl(45, 100%, 96%);
+  --primary: hsl(50, 98%, 52%);
+  --secondary: hsl(222, 87%, 72%);
+  --accent: hsl(163, 88%, 64%);
+  --toggle-bg: hsl(53, 98%, 72%);
+  --toggle-fg: hsl(53, 98%, 48%);
+}
+[data-theme="dark"] {
+  --text: hsl(45, 100%, 96%);
+  --background: hsl(45, 100%, 4%);
+  --primary: hsl(50, 98%, 48%);
+  --secondary: hsl(222, 87%, 28%);
+  --accent: hsl(163, 88%, 36%);
+  --toggle-bg: hsl(203, 90%, 76%);
+  --toggle-fg: hsl(207, 54%, 52%);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
-}
+
+/* Fonts Options */
+
+/* p {
+  font-family: "Roboto Slab", serif;
+  font-family: "Quattrocento", serif;
+  font-family: "Quattrocento Sans", sans-serif;
+} */
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: "Roboto Slab", serif;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Quattrocento", serif;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* App styles */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  max-width: 50rem;
+  text-align: center;
+  padding: 2rem;
+}
+.box-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--text);
+}
+.box {
+  width: 10rem;
+  height: 10rem;
+}
+.box-1 {
+  background-color: var(--primary);
+}
+.box-2 {
+  background-color: var(--accent);
+}
+.box-3 {
+  background-color: var(--secondary);
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-block: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-block: 2rem;
 }
