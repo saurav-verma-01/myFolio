@@ -8,7 +8,7 @@ const App = () => {
   };
 
   return (
-    <main className="app" data-theme="dark">
+    <main className="app" data-theme={isDark ? "dark" : ""}>
       <Toggle isDark={isDark} onToggle={handleThemeToggle} />
       <div className="container">
         <h1>Saurav Kumar verma</h1>

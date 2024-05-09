@@ -1,19 +1,19 @@
 :root {
-  --text: hsl(45, 100%, 4%);
-  --background: hsl(45, 100%, 96%);
-  --primary: hsl(50, 98%, 52%);
-  --secondary: hsl(222, 87%, 72%);
-  --accent: hsl(163, 88%, 64%);
-  --toggle-bg: hsl(53, 98%, 72%);
+  --text: hsl(92, 39%, 6%);
+  --background: hsl(94, 41%, 97%);
+  --primary: hsl(96, 98%, 52%);
+  --secondary: hsl(96, 95%, 71%);
+  --accent: hsl(158, 94%, 61%);
+  --toggle-bg: hsl(53, 90%, 80%);
   --toggle-fg: hsl(53, 98%, 48%);
 }
 [data-theme="dark"] {
-  --text: hsl(45, 100%, 96%);
-  --background: hsl(45, 100%, 4%);
-  --primary: hsl(50, 98%, 48%);
-  --secondary: hsl(222, 87%, 28%);
-  --accent: hsl(163, 88%, 36%);
-  --toggle-bg: hsl(203, 90%, 76%);
+  --text: hsl(95, 40%, 94%);
+  --background: hsl(100, 38%, 3%);
+  --primary: hsl(96, 98%, 48%);
+  --secondary: hsl(96, 95%, 29%);
+  --accent: hsl(158, 94%, 39%);
+  --toggle-bg: hsl(206, 88%, 84%);
   --toggle-fg: hsl(207, 54%, 52%);
 }
 
@@ -60,6 +60,8 @@ h5 {
 
   background-color: var(--background);
   color: var(--text);
+
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .container {

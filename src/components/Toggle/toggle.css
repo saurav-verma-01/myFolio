@@ -13,7 +13,10 @@
   align-items: center;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--toggle-fg);
+  color: var(--background);
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* pointer-events: none; */
 }
 
 .toggle + label::before {
@@ -23,6 +26,7 @@
   border-radius: 1rem;
   background-color: var(--toggle-bg);
   margin-right: 0.5rem;
+  transition: backgroundColor 0.4s ease-in-out;
 }
 
 .toggle + label::after {
@@ -33,6 +37,8 @@
   background-color: var(--toggle-fg);
   position: absolute;
   left: 0.2rem;
+
+  transition: transform 0.4s ease-in-out, backgroundColor 0.4s ease-in-out;
 }
 
 .toggle:checked + label::after {
